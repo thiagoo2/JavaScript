@@ -1,0 +1,11 @@
+
+let numeroIngresado = parseInt(prompt("Introduce un número:"));
+
+
+while (numeroIngresado !== 7) {
+    console.log(`Número ingresado: ${numeroIngresado}`);
+    numeroIngresado = parseInt(prompt("Introduce otro número:"));
+}
+
+
+console.log("¡Has ingresado el número 7! Fin del programa.");
