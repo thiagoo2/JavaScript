@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+    <script>
+        function calcular() {
+            // Obtener los valores ingresados por el usuario
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+
+            // Calcular la resta y la multiplicación
+            let resta = num1 - num2;
+            let multiplicacion = num1 * num2;
+
+            // Mostrar los resultados
+            document.getElementById("resultadoResta").innerHTML = `Resta: ${resta}`;
+            document.getElementById("resultadoMultiplicacion").innerHTML = `Multiplicación: ${multiplicacion}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <p>Introduce dos números:</p>
+    <input type="number" id="num1" placeholder="Número 1">
+    <input type="number" id="num2" placeholder="Número 2">
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultadoResta"></p>
+    <p id="resultadoMultiplicacion"></p>
+</body>
+</html>
