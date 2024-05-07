@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Acceso al portal web</h2>
+
+<button id="accesoBtn">Verificar acceso</button>
+
+<p id="mensaje"></p>
+
+<script>
+document.getElementById('accesoBtn').addEventListener('click', accesoPortal);
+
+function accesoPortal() {
+  let edad = prompt("Por favor, introduce tu edad", "18");
+  
+  if (edad < 1 || edad > 120) {
+    alert("Edad no permitida. Debe ser entre 1 y 120 años.");
+    return;
+  }
+  
+  if (edad >= 18) {
+    document.getElementById("mensaje").textContent = "Sí tiene permiso de acceso";
+  } else {
+    document.getElementById("mensaje").textContent = "No tienes permiso de acceso";
+  }
+}
+</script>
+
+</body>
+</html>
