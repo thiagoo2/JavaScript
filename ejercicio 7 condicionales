@@ -1,0 +1,37 @@
+Pseudocodigo
+Si (alumno es de FP) entonces
+    Si (edad del alumno > 18) entonces
+        Imprimir "Bienvenid@"
+    Sino
+        Imprimir "No tienes acceso al portal web"
+    Fin Si
+Sino
+    Imprimir "No tienes acceso al portal web"
+Fin Si
+
+Codigo
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Acceso al portal web</h2>
+
+<button onclick="accesoPortal()">Verificar acceso</button>
+
+<p id="mensaje"></p>
+
+<script>
+function accesoPortal() {
+  var esDeFP = confirm("¿Eres alumno de FP?");
+  var edad = prompt("Por favor, introduce tu edad", "18");
+  
+  if (esDeFP && edad > 18) {
+    document.getElementById("mensaje").innerHTML = "Bienvenid@";
+  } else {
+    document.getElementById("mensaje").innerHTML = "No tienes acceso al portal web";
+  }
+}
+</script>
+
+</body>
+</html>
