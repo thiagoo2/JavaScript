@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Acceso al portal web</h2>
+<button id="accesoBtn">Verificar acceso</button>
+<p id="mensaje"></p>
+<script>
+document.getElementById('accesoBtn').addEventListener('click', accesoPortal);
+function accesoPortal() {
+  const esDeFP = confirm("¿Eres alumno de FP?");
+  let edad = prompt("Por favor, introduce tu edad", "18");
+  
+  if (esDeFP && edad > 18) {
+    document.getElementById("mensaje").textContent = "Bienvenid@";
+  } else {
+    document.getElementById("mensaje").textContent = "No tienes acceso al portal web";
+  }
+}
+</script>
+</body>
+</html>
