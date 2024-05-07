@@ -1,0 +1,22 @@
+El código está dentro del elemento <body> en el archivo HTML porque es donde se coloca todo el contenido visible para el usuario en una página web.
+
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<p id="salida"></p>
+<script>
+let suerte = (Math.random() * 6);
+let dado = parseInt(suerte) + 1;
+let obj1=document.getElementById("salida")
+if (dado>3)
+{
+obj1.innerHTML= `Has ganado, ha salido el numero ${dado} `;
+}
+else
+{
+obj1.innerHTML=`Lo siento, ha salido el numero ${dado} `;
+}
+</script>
+</body>
+</html>
