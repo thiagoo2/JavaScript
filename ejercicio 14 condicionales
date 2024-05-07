@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Verificar días del mes</h2>
+
+<label for="mes">Introduce el número del mes (1-12):</label><br>
+<input type="number" id="mes" name="mes" min="1" max="12"><br>
+<button id="verificarBtn">Verificar días</button>
+
+<p id="mensaje"></p>
+
+<script>
+document.getElementById('verificarBtn').addEventListener('click', verificarDias);
+
+function verificarDias() {
+  let mes = document.getElementById('mes').value;
+  let dias;
+  
+  switch(mes) {
+    case "4":
+    case "6":
+    case "9":
+    case "11":
+      dias = "30";
+      break;
+    case "2":
+      dias = "28 o 29 (dependiendo si es un año bisiesto)";
+      break;
+    default:
+      dias = "31";
+  }
+  
+  document.getElementById("mensaje").textContent = "El mes " + mes + " tiene " + dias + " días.";
+}
+</script>
+
+</body>
+</html>
